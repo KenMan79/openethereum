@@ -4,12 +4,12 @@
 name = "account-db"
 version = "0.1.0"
 dependencies = [
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "hash-db",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "keccak-hasher 0.1.1",
  "kvdb",
- "rlp",
+ "rlp 0.4.4",
 ]
 
 [[package]]
@@ -19,24 +19,24 @@ dependencies = [
  "account-db",
  "common-types",
  "derive_more 0.15.0",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "hash-db",
  "journaldb",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "keccak-hasher 0.1.1",
  "kvdb",
  "log",
  "lru-cache",
- "memory-db",
+ "memory-db 0.18.0",
  "parity-bytes",
  "parity-util-mem 0.3.0",
  "parking_lot 0.9.0",
  "patricia-trie-ethereum",
  "pod",
- "rlp",
+ "rlp 0.4.4",
  "rlp_compress",
  "serde",
- "trie-db",
+ "trie-db 0.18.0",
  "trie-vm-factories",
 ]
 
@@ -93,6 +93,12 @@ checksum = "6f33b5018f120946c1dcf279194f238a9f146725593ead1c08fa47ff22b0b5d3"
 dependencies = [
  "const-random",
 ]
+
+[[package]]
+name = "ahash"
+version = "0.4.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "739f4a8db6605981345c5654f3a85b056ce52f37a39d34da03f25bf2151ea16e"
 
 [[package]]
 name = "aho-corasick"
@@ -204,10 +210,10 @@ dependencies = [
  "ethcore",
  "ethcore-accounts",
  "ethcore-io",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
  "itertools 0.5.10",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "lazy_static",
  "log",
  "lru-cache",
@@ -217,7 +223,7 @@ dependencies = [
  "parity-crypto",
  "parking_lot 0.9.0",
  "rand 0.7.2",
- "rlp",
+ "rlp 0.4.4",
  "serde_json",
  "spec",
  "state-db",
@@ -239,7 +245,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "89a47830402e9981c5c41223151efcced65a0510c13097c769cede7efb34782a"
 dependencies = [
  "backtrace-sys",
- "cfg-if",
+ "cfg-if 0.1.10",
  "libc",
  "rustc-demangle",
  "winapi 0.3.8",
@@ -289,14 +295,14 @@ dependencies = [
  "engine",
  "ethcore",
  "ethcore-accounts",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "log",
  "machine",
  "parity-crypto",
  "parking_lot 0.9.0",
- "rlp",
+ "rlp 0.4.4",
  "spec",
  "tempdir",
  "validator-set",
@@ -321,7 +327,7 @@ checksum = "846a1fba6535362a01487ef6b10f0275faa12e5c5d835c5c1c627aabc46ccbd6"
 dependencies = [
  "bitflags",
  "cexpr",
- "cfg-if",
+ "cfg-if 0.1.10",
  "clang-sys",
  "clap",
  "env_logger 0.6.2",
@@ -364,6 +370,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a993f74b4c99c1908d156b8d2e0fb6277736b0ecbd833982fd1241d39b2766a6"
 
 [[package]]
+name = "bitvec"
+version = "0.20.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f5011ffc90248764d7005b0e10c7294f5aa1bd87d9dd7248f4ad475b347c294d"
+dependencies = [
+ "funty",
+ "radium",
+ "tap",
+ "wyz",
+]
+
+[[package]]
 name = "block-buffer"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -404,7 +422,7 @@ dependencies = [
  "ethabi-contract",
  "ethabi-derive",
  "ethcore",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "log",
  "spec",
 ]
@@ -438,8 +456,8 @@ dependencies = [
  "ethabi-contract",
  "ethabi-derive",
  "ethcore",
- "ethereum-types",
- "keccak-hash",
+ "ethereum-types 0.8.0",
+ "keccak-hash 0.4.0",
  "machine",
  "spec",
  "trace",
@@ -450,7 +468,7 @@ name = "blooms-db"
 version = "0.1.0"
 dependencies = [
  "criterion",
- "ethbloom",
+ "ethbloom 0.8.1",
  "parking_lot 0.9.0",
  "tempdir",
 ]
@@ -464,7 +482,7 @@ dependencies = [
  "crunchy 0.2.2",
  "lazy_static",
  "rand 0.5.5",
- "rustc-hex 2.0.1",
+ "rustc-hex 2.1.0",
 ]
 
 [[package]]
@@ -490,6 +508,12 @@ name = "byte-slice-cast"
 version = "0.3.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f6209f3b2c1edea170002e016d5ead6903d3bb0a846477f53bbeb614967a52a9"
+
+[[package]]
+name = "byte-slice-cast"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "65c1bf4a04a88c54f589125563643d773f3254b5c38571395e2b591c693bbc81"
 
 [[package]]
 name = "byte-tools"
@@ -518,6 +542,12 @@ dependencies = [
  "byteorder",
  "iovec",
 ]
+
+[[package]]
+name = "bytes"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b700ce4376041dcd0a327fd0097c41095743c4c8af8887265942faf1100bd040"
 
 [[package]]
 name = "c2-chacha"
@@ -559,6 +589,12 @@ name = "cfg-if"
 version = "0.1.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4785bdd1c96b2a846b2bd7cc02e86b6b3dbf14e7e53446c4f54c92a361040822"
+
+[[package]]
+name = "cfg-if"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
 name = "chainspec"
@@ -620,7 +656,7 @@ dependencies = [
 name = "cli-signer"
 version = "1.4.0"
 dependencies = [
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "futures",
  "parity-rpc",
  "parity-rpc-client",
@@ -637,7 +673,7 @@ dependencies = [
  "ethcore-call-contract",
  "ethcore-db",
  "ethcore-miner",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "kvdb",
  "parity-bytes",
  "registrar",
@@ -654,9 +690,9 @@ dependencies = [
  "common-types",
  "engine",
  "ethcore",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "lazy_static",
  "log",
  "lru-cache",
@@ -665,7 +701,7 @@ dependencies = [
  "parity-crypto",
  "parking_lot 0.9.0",
  "rand 0.7.2",
- "rlp",
+ "rlp 0.4.4",
  "spec",
  "state-db",
  "time-utils",
@@ -695,19 +731,19 @@ name = "common-types"
 version = "0.1.0"
 dependencies = [
  "derive_more 0.15.0",
- "ethbloom",
+ "ethbloom 0.8.1",
  "ethcore-io",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "parity-bytes",
  "parity-crypto",
  "parity-snappy",
  "parity-util-mem 0.3.0",
  "patricia-trie-ethereum",
- "rlp",
+ "rlp 0.4.4",
  "rlp_derive",
- "rustc-hex 2.0.1",
+ "rustc-hex 2.1.0",
  "unexpected",
  "vm",
 ]
@@ -810,11 +846,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fedcd6772e37f3da2a9af9bf12ebe046c0dfe657992377b4df982a2b54cd37a9"
 dependencies = [
  "arrayvec 0.4.11",
- "cfg-if",
+ "cfg-if 0.1.10",
  "crossbeam-utils 0.6.6",
  "lazy_static",
  "memoffset",
- "scopeguard 1.0.0",
+ "scopeguard 1.1.0",
 ]
 
 [[package]]
@@ -838,7 +874,7 @@ version = "0.6.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "04973fa96e96579258a5091af6003abde64af786b860f18622b82e026cca60e6"
 dependencies = [
- "cfg-if",
+ "cfg-if 0.1.10",
  "lazy_static",
 ]
 
@@ -970,7 +1006,7 @@ name = "dir"
 version = "0.1.2"
 dependencies = [
  "app_dirs",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "home",
  "journaldb",
 ]
@@ -1000,7 +1036,7 @@ version = "0.1.0"
 dependencies = [
  "arrayref",
  "criterion",
- "rustc-hex 2.0.1",
+ "rustc-hex 2.1.0",
 ]
 
 [[package]]
@@ -1008,15 +1044,15 @@ name = "eip-712"
 version = "0.1.1"
 dependencies = [
  "ethabi",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "failure",
  "indexmap",
  "itertools 0.7.8",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "lazy_static",
  "lunarity-lexer",
  "regex",
- "rustc-hex 2.0.1",
+ "rustc-hex 2.1.0",
  "serde",
  "serde_derive",
  "serde_json",
@@ -1040,6 +1076,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "elastic-array"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0d63720ea2bc2e1b79f7aa044d9dc0b825f9ccb6930b32120f8fb9e873aa84bc"
+dependencies = [
+ "heapsize",
+]
+
+[[package]]
 name = "engine"
 version = "0.1.0"
 dependencies = [
@@ -1048,7 +1093,7 @@ dependencies = [
  "ethcore-accounts",
  "ethcore-blockchain",
  "ethcore-builtin",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethkey",
  "log",
  "machine",
@@ -1105,12 +1150,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "965126c64662832991f5a748893577630b558e47fa94e7f35aefcd20d737cef7"
 dependencies = [
  "error-chain",
- "ethereum-types",
- "rustc-hex 2.0.1",
+ "ethereum-types 0.8.0",
+ "rustc-hex 2.1.0",
  "serde",
  "serde_derive",
  "serde_json",
- "tiny-keccak",
+ "tiny-keccak 1.5.0",
 ]
 
 [[package]]
@@ -1139,8 +1184,8 @@ dependencies = [
  "common-types",
  "criterion",
  "either",
- "ethereum-types",
- "keccak-hash",
+ "ethereum-types 0.8.0",
+ "keccak-hash 0.4.0",
  "log",
  "memmap",
  "parking_lot 0.9.0",
@@ -1160,13 +1205,13 @@ dependencies = [
  "engine",
  "ethash",
  "ethcore",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "log",
  "machine",
  "macros",
- "rlp",
+ "rlp 0.4.4",
  "spec",
  "tempdir",
  "unexpected",
@@ -1179,10 +1224,23 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "32cfe1c169414b709cf28aa30c74060bdb830a03a8ba473314d079ac79d80a5f"
 dependencies = [
  "crunchy 0.2.2",
- "fixed-hash",
- "impl-rlp",
- "impl-serde",
- "tiny-keccak",
+ "fixed-hash 0.5.2",
+ "impl-rlp 0.2.1",
+ "impl-serde 0.2.3",
+ "tiny-keccak 1.5.0",
+]
+
+[[package]]
+name = "ethbloom"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "779864b9c7f7ead1f092972c3257496c6a84b46dba2ce131dd8a282cb2cc5972"
+dependencies = [
+ "crunchy 0.2.2",
+ "fixed-hash 0.7.0",
+ "impl-rlp 0.3.0",
+ "impl-serde 0.3.1",
+ "tiny-keccak 2.0.2",
 ]
 
 [[package]]
@@ -1208,7 +1266,7 @@ dependencies = [
  "ethcore-io",
  "ethcore-miner",
  "ethcore-stratum",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
  "evm",
  "executive-state",
@@ -1217,7 +1275,7 @@ dependencies = [
  "hash-db",
  "itertools 0.5.10",
  "journaldb",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "kvdb",
  "kvdb-memorydb",
  "kvdb-rocksdb",
@@ -1236,9 +1294,9 @@ dependencies = [
  "rand_xorshift 0.2.0",
  "rayon",
  "registrar",
- "rlp",
- "rustc-hex 2.0.1",
- "scopeguard 1.0.0",
+ "rlp 0.4.4",
+ "rustc-hex 2.1.0",
+ "scopeguard 1.1.0",
  "serde",
  "serde_derive",
  "serde_json",
@@ -1249,7 +1307,7 @@ dependencies = [
  "tempdir",
  "trace",
  "trace-time",
- "trie-db",
+ "trie-db 0.18.0",
  "trie-standardmap",
  "trie-vm-factories",
  "triehash-ethereum",
@@ -1263,7 +1321,7 @@ dependencies = [
 name = "ethcore-accounts"
 version = "0.1.0"
 dependencies = [
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethkey",
  "ethstore",
  "log",
@@ -1284,9 +1342,9 @@ dependencies = [
  "common-types",
  "env_logger 0.5.13",
  "ethcore-db",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "itertools 0.5.10",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "kvdb",
  "kvdb-memorydb",
  "log",
@@ -1296,7 +1354,7 @@ dependencies = [
  "parking_lot 0.9.0",
  "rand 0.7.2",
  "rayon",
- "rlp",
+ "rlp 0.4.4",
  "rlp_compress",
  "rlp_derive",
  "rustc-hex 1.0.0",
@@ -1319,10 +1377,10 @@ dependencies = [
  "byteorder",
  "common-types",
  "eip-152",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
  "hex-literal",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "log",
  "macros",
  "num",
@@ -1335,7 +1393,7 @@ name = "ethcore-call-contract"
 version = "0.1.0"
 dependencies = [
  "common-types",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "parity-bytes",
 ]
 
@@ -1344,11 +1402,11 @@ name = "ethcore-db"
 version = "0.1.0"
 dependencies = [
  "common-types",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "kvdb",
  "parity-util-mem 0.3.0",
  "parking_lot 0.9.0",
- "rlp",
+ "rlp 0.4.4",
  "rlp_derive",
 ]
 
@@ -1384,27 +1442,27 @@ dependencies = [
  "ethcore-io",
  "ethcore-miner",
  "ethcore-network",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "executive-state",
  "failsafe",
  "fastmap",
  "futures",
  "hash-db",
  "journaldb",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "keccak-hasher 0.1.1",
  "kvdb",
  "kvdb-memorydb",
  "log",
  "machine",
  "memory-cache",
- "memory-db",
+ "memory-db 0.18.0",
  "parity-bytes",
  "parity-util-mem 0.3.0",
  "parking_lot 0.9.0",
  "patricia-trie-ethereum",
  "rand 0.7.2",
- "rlp",
+ "rlp 0.4.4",
  "rlp_derive",
  "serde",
  "serde_derive",
@@ -1412,7 +1470,7 @@ dependencies = [
  "spec",
  "stats",
  "tempdir",
- "trie-db",
+ "trie-db 0.18.0",
  "triehash-ethereum",
  "verification",
  "vm",
@@ -1445,11 +1503,11 @@ dependencies = [
  "ethabi-derive",
  "ethash",
  "ethcore-call-contract",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "fetch",
  "futures",
  "hyper",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "linked-hash-map",
  "log",
  "parity-crypto",
@@ -1458,7 +1516,7 @@ dependencies = [
  "parking_lot 0.9.0",
  "price-info",
  "registrar",
- "rlp",
+ "rlp 0.4.4",
  "rustc-hex 1.0.0",
  "serde",
  "serde_derive",
@@ -1475,13 +1533,13 @@ dependencies = [
  "assert_matches",
  "derive_more 0.14.0",
  "ethcore-io",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ipnetwork",
  "lazy_static",
  "libc",
  "parity-crypto",
  "parity-snappy",
- "rlp",
+ "rlp 0.4.4",
  "semver",
  "serde",
  "serde_derive",
@@ -1493,14 +1551,14 @@ version = "1.12.0"
 dependencies = [
  "ansi_term",
  "assert_matches",
- "bytes",
+ "bytes 0.4.12",
  "env_logger 0.5.13",
  "ethcore-io",
  "ethcore-network",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "igd",
  "ipnetwork",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "libc",
  "log",
  "lru-cache",
@@ -1512,13 +1570,13 @@ dependencies = [
  "parity-snappy",
  "parking_lot 0.9.0",
  "rand 0.7.2",
- "rlp",
+ "rlp 0.4.4",
  "rustc-hex 1.0.0",
  "serde",
  "serde_json",
  "slab 0.2.0",
  "tempdir",
- "tiny-keccak",
+ "tiny-keccak 1.5.0",
 ]
 
 [[package]]
@@ -1538,13 +1596,13 @@ dependencies = [
  "ethcore-db",
  "ethcore-io",
  "ethcore-miner",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
  "fetch",
  "futures",
  "hash-db",
  "journaldb",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "keccak-hasher 0.1.1",
  "kvdb",
  "log",
@@ -1555,7 +1613,7 @@ dependencies = [
  "parking_lot 0.9.0",
  "patricia-trie-ethereum",
  "registrar",
- "rlp",
+ "rlp 0.4.4",
  "rlp_derive",
  "rustc-hex 1.0.0",
  "serde",
@@ -1564,10 +1622,10 @@ dependencies = [
  "spec",
  "state-db",
  "time-utils",
- "tiny-keccak",
+ "tiny-keccak 1.5.0",
  "trace",
  "transaction-pool",
- "trie-db",
+ "trie-db 0.18.0",
  "url 2.1.0",
  "vm",
 ]
@@ -1581,12 +1639,12 @@ dependencies = [
  "ethabi",
  "ethabi-contract",
  "ethabi-derive",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethkey",
  "futures",
  "hyper",
  "jsonrpc-server-utils",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "kvdb",
  "kvdb-rocksdb",
  "lazy_static",
@@ -1601,7 +1659,7 @@ dependencies = [
  "serde_derive",
  "serde_json",
  "tempdir",
- "tiny-keccak",
+ "tiny-keccak 1.5.0",
  "tokio",
  "tokio-io",
  "tokio-service",
@@ -1621,7 +1679,7 @@ dependencies = [
  "ethcore-io",
  "ethcore-private-tx",
  "ethcore-sync",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "kvdb",
  "kvdb-rocksdb",
  "log",
@@ -1636,10 +1694,10 @@ name = "ethcore-stratum"
 version = "1.12.0"
 dependencies = [
  "env_logger 0.5.13",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "jsonrpc-core",
  "jsonrpc-tcp-server",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "log",
  "parking_lot 0.9.0",
  "tokio",
@@ -1661,11 +1719,11 @@ dependencies = [
  "ethcore-network",
  "ethcore-network-devp2p",
  "ethcore-private-tx",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "fastmap",
  "futures",
  "indexmap",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "kvdb-memorydb",
  "log",
  "machine",
@@ -1677,7 +1735,7 @@ dependencies = [
  "parking_lot 0.9.0",
  "rand 0.7.2",
  "rand_xorshift 0.2.0",
- "rlp",
+ "rlp 0.4.4",
  "rustc-hex 1.0.0",
  "snapshot",
  "spec",
@@ -1691,19 +1749,33 @@ version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ba744248e3553a393143d5ebb68939fc3a4ec0c22a269682535f5ffe7fed728c"
 dependencies = [
- "ethbloom",
- "fixed-hash",
- "impl-rlp",
- "impl-serde",
- "primitive-types",
- "uint",
+ "ethbloom 0.8.1",
+ "fixed-hash 0.5.2",
+ "impl-rlp 0.2.1",
+ "impl-serde 0.2.3",
+ "primitive-types 0.6.1",
+ "uint 0.8.2",
+]
+
+[[package]]
+name = "ethereum-types"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f64b5df66a228d85e4b17e5d6c6aa43b0310898ffe8a85988c4c032357aaabfd"
+dependencies = [
+ "ethbloom 0.11.0",
+ "fixed-hash 0.7.0",
+ "impl-rlp 0.3.0",
+ "impl-serde 0.3.1",
+ "primitive-types 0.9.0",
+ "uint 0.9.0",
 ]
 
 [[package]]
 name = "ethjson"
 version = "0.1.0"
 dependencies = [
- "ethereum-types",
+ "ethereum-types 0.11.0",
  "macros",
  "rustc-hex 1.0.0",
  "serde",
@@ -1743,7 +1815,7 @@ name = "ethstore"
 version = "0.2.1"
 dependencies = [
  "dir",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethkey",
  "itertools 0.5.10",
  "libc",
@@ -1760,7 +1832,7 @@ dependencies = [
  "smallvec 0.6.10",
  "tempdir",
  "time",
- "tiny-keccak",
+ "tiny-keccak 1.5.0",
 ]
 
 [[package]]
@@ -1788,9 +1860,9 @@ version = "0.1.0"
 dependencies = [
  "bit-set",
  "criterion",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "hex-literal",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "lazy_static",
  "log",
  "memory-cache",
@@ -1811,7 +1883,7 @@ dependencies = [
  "docopt",
  "env_logger 0.5.13",
  "ethcore",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
  "evm",
  "panic_hook",
@@ -1835,10 +1907,10 @@ dependencies = [
  "common-types",
  "env_logger 0.5.13",
  "ethcore",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "evm",
  "hash-db",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "keccak-hasher 0.1.1",
  "kvdb",
  "log",
@@ -1850,7 +1922,7 @@ dependencies = [
  "rustc-hex 1.0.0",
  "spec",
  "trace",
- "trie-db",
+ "trie-db 0.18.0",
  "trie-vm-factories",
  "vm",
 ]
@@ -1907,7 +1979,7 @@ checksum = "e88a8acf291dafb59c2d96e8f59828f3838bb1a70398823ade51a84de6a6deed"
 name = "fastmap"
 version = "0.1.0"
 dependencies = [
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "plain_hasher",
 ]
 
@@ -1924,7 +1996,7 @@ dependencies = [
 name = "fetch"
 version = "0.1.0"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
  "futures",
  "http",
  "hyper",
@@ -1943,7 +2015,19 @@ dependencies = [
  "byteorder",
  "libc",
  "rand 0.7.2",
- "rustc-hex 2.0.1",
+ "rustc-hex 2.1.0",
+ "static_assertions 1.1.0",
+]
+
+[[package]]
+name = "fixed-hash"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cfcf0ed7fe52a17a03854ec54a9f76d6d84508d1c0e66bc1793301c73fc8493c"
+dependencies = [
+ "byteorder",
+ "rand 0.8.3",
+ "rustc-hex 2.1.0",
  "static_assertions 1.1.0",
 ]
 
@@ -2000,6 +2084,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3dcaa9ae7725d12cdb85b3ad99a434db70b468c09ded17e012d86b5c1010f7a7"
 
 [[package]]
+name = "funty"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fed34cd105917e91daa4da6b3728c47b068749d6a62c59811f06ed2ac71d9da7"
+
+[[package]]
 name = "futures"
 version = "0.1.29"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2048,9 +2138,20 @@ version = "0.1.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fc344b02d3868feb131e8b5fe2b9b0a1cc42942679af493061fc13b853243872"
 dependencies = [
- "cfg-if",
+ "cfg-if 0.1.10",
  "libc",
- "wasi",
+ "wasi 0.5.0",
+]
+
+[[package]]
+name = "getrandom"
+version = "0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c9495705279e7140bf035dde1f6e750c162df8b625267cd52cc44e0b156732c8"
+dependencies = [
+ "cfg-if 1.0.0",
+ "libc",
+ "wasi 0.10.2+wasi-snapshot-preview1",
 ]
 
 [[package]]
@@ -2079,7 +2180,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a5b34c246847f938a410a03c5458c7fee2274436675e76d8b903c08efc29c462"
 dependencies = [
  "byteorder",
- "bytes",
+ "bytes 0.4.12",
  "fnv",
  "futures",
  "http",
@@ -2117,8 +2218,17 @@ version = "0.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8e6073d0ca812575946eb5f35ff68dbe519907b25c42530389ff946dc84c6ead"
 dependencies = [
- "ahash",
+ "ahash 0.2.18",
  "autocfg",
+]
+
+[[package]]
+name = "hashbrown"
+version = "0.9.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d7afe4a420e3fe79967a00898cc1f4db7c8a49a9333a29f8a4bd76a253d5cd04"
+dependencies = [
+ "ahash 0.4.7",
 ]
 
 [[package]]
@@ -2138,6 +2248,12 @@ checksum = "ea04fa3ead4e05e51a7c806fc07271fdbde4e246a6c6d1efd52e72230b771b82"
 dependencies = [
  "unicode-segmentation",
 ]
+
+[[package]]
+name = "hex"
+version = "0.4.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "644f9158b2f133fd50f5fb3242878846d9eb792e445c893805ff0e3824006e35"
 
 [[package]]
 name = "hex-literal"
@@ -2184,7 +2300,7 @@ version = "0.1.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d6ccf5ede3a895d8856620237b2f02972c1bbc78d2965ad7fe8838d4a0ed41f0"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
  "fnv",
  "itoa",
 ]
@@ -2210,7 +2326,7 @@ version = "0.12.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f1ebec079129e43af5e234ef36ee3d7e6085687d145b7ea653b262d16c6b65f1"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
  "futures",
  "futures-cpupool",
  "h2",
@@ -2237,7 +2353,7 @@ version = "0.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b66a4973381d01141ed0a4f20070d47a232c764642dd6217d3d93f7a1f952ea5"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
  "ct-logs",
  "futures",
  "hyper",
@@ -2283,7 +2399,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "96f0f346ff76d5143011b2de50fbe72c3e521304868dfbd0d781b4f262a75dd5"
 dependencies = [
  "attohttpc",
- "bytes",
+ "bytes 0.4.12",
  "http",
  "log",
  "rand 0.4.6",
@@ -2297,7 +2413,16 @@ version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1be51a921b067b0eaca2fad532d9400041561aa922221cc65f95a85641c6bf53"
 dependencies = [
- "parity-scale-codec",
+ "parity-scale-codec 1.1.0",
+]
+
+[[package]]
+name = "impl-codec"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "df170efa359aebdd5cb7fe78edcc67107748e4737bdca8a8fb40d15ea7a877ed"
+dependencies = [
+ "parity-scale-codec 2.0.0",
 ]
 
 [[package]]
@@ -2306,7 +2431,16 @@ version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8f7a72f11830b52333f36e3b09a288333888bf54380fd0ac0790a3c31ab0f3c5"
 dependencies = [
- "rlp",
+ "rlp 0.4.4",
+]
+
+[[package]]
+name = "impl-rlp"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f28220f89297a075ddc7245cd538076ee98b01f2a9c23a53a4f1105d5a322808"
+dependencies = [
+ "rlp 0.5.0",
 ]
 
 [[package]]
@@ -2314,6 +2448,15 @@ name = "impl-serde"
 version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "58e3cae7e99c7ff5a995da2cf78dd0a5383740eda71d98cf7b1910c301ac69b8"
+dependencies = [
+ "serde",
+]
+
+[[package]]
+name = "impl-serde"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b47ca4d2b6931707a55fce5cf66aff80e2178c8b63bbb4ecb5695cbc870ddf6f"
 dependencies = [
  "serde",
 ]
@@ -2330,12 +2473,32 @@ dependencies = [
 ]
 
 [[package]]
+name = "impl-trait-for-tuples"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6f65a8ecf74feeacdab8d38cb129e550ca871cccaa7d1921d8636ecd75534903"
+dependencies = [
+ "proc-macro2 1.0.8",
+ "quote 1.0.2",
+ "syn 1.0.14",
+]
+
+[[package]]
 name = "indexmap"
 version = "1.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "712d7b3ea5827fcb9d4fda14bf4da5f136f0db2ae9c8f4bd4e2d1c6fde4e6db2"
 dependencies = [
  "autocfg",
+]
+
+[[package]]
+name = "instant"
+version = "0.1.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "61124eeebbd69b8190558df225adf7e4caafce0d743919e5d6b19652314ec5ec"
+dependencies = [
+ "cfg-if 1.0.0",
 ]
 
 [[package]]
@@ -2346,11 +2509,11 @@ dependencies = [
  "common-types",
  "engine",
  "ethcore",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "machine",
- "rlp",
+ "rlp 0.4.4",
  "spec",
  "trace",
 ]
@@ -2453,19 +2616,19 @@ name = "journaldb"
 version = "0.2.0"
 dependencies = [
  "env_logger 0.5.13",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "fastmap",
  "hash-db",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "keccak-hasher 0.1.1",
  "kvdb",
  "kvdb-memorydb",
  "log",
- "memory-db",
+ "memory-db 0.18.0",
  "parity-bytes",
  "parity-util-mem 0.3.0",
  "parking_lot 0.9.0",
- "rlp",
+ "rlp 0.4.4",
 ]
 
 [[package]]
@@ -2549,7 +2712,7 @@ version = "14.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "87bc3c0a9a282211b2ec14abb3e977de33016bbec495332e9f7be858de7c5117"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
  "globset",
  "jsonrpc-core",
  "lazy_static",
@@ -2592,18 +2755,28 @@ version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e563fa6fe52b2686094846118bf2cb2e6f75e6b8cec6c3aba09be8e835c7f998"
 dependencies = [
- "primitive-types",
- "tiny-keccak",
+ "primitive-types 0.6.1",
+ "tiny-keccak 1.5.0",
+]
+
+[[package]]
+name = "keccak-hash"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ae0386ec98c26dd721aaa3412bf3a817156ff3ee7cb6959503f8d1095f4ccc51"
+dependencies = [
+ "primitive-types 0.9.0",
+ "tiny-keccak 2.0.2",
 ]
 
 [[package]]
 name = "keccak-hasher"
 version = "0.1.1"
 dependencies = [
- "ethereum-types",
+ "ethereum-types 0.11.0",
  "hash-db",
  "plain_hasher",
- "tiny-keccak",
+ "tiny-keccak 2.0.2",
 ]
 
 [[package]]
@@ -2614,7 +2787,7 @@ checksum = "3bf18164fd7ce989041f8fc4a1ae72a8bd1bec3575f2aeaf1d4968fc053aabef"
 dependencies = [
  "hash-db",
  "hash256-std-hasher",
- "tiny-keccak",
+ "tiny-keccak 1.5.0",
 ]
 
 [[package]]
@@ -2689,9 +2862,9 @@ dependencies = [
 
 [[package]]
 name = "libc"
-version = "0.2.65"
+version = "0.2.84"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1a31a0627fdf1f6a39ec0dd577e101440b7db22672c0901fe00a9a6fbb5c24e8"
+checksum = "1cca32fa0182e8c0989459524dc356b8f2b5c10f1b9eb521b7d182c03cf8c5ff"
 
 [[package]]
 name = "libloading"
@@ -2737,7 +2910,16 @@ version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f8912e782533a93a167888781b836336a6ca5da6175c05944c86cf28c31104dc"
 dependencies = [
- "scopeguard 1.0.0",
+ "scopeguard 1.1.0",
+]
+
+[[package]]
+name = "lock_api"
+version = "0.4.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "dd96ffd135b2fd7b973ac026d28085defbe8983df057ced3eb4f2130b0831312"
+dependencies = [
+ "scopeguard 1.1.0",
 ]
 
 [[package]]
@@ -2746,7 +2928,7 @@ version = "0.4.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "14b6052be84e6b71ab17edffc2eeabf5c2c3ae1fdb464aae35ac50c67a44e1f7"
 dependencies = [
- "cfg-if",
+ "cfg-if 0.1.10",
 ]
 
 [[package]]
@@ -2806,17 +2988,17 @@ dependencies = [
  "ethcore-builtin",
  "ethcore-call-contract",
  "ethcore-io",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
  "evm",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "log",
  "lru-cache",
  "macros",
  "parity-bytes",
  "parity-crypto",
  "parking_lot 0.9.0",
- "rlp",
+ "rlp 0.4.4",
  "rustc-hex 1.0.0",
  "spec",
  "state-db",
@@ -2889,10 +3071,21 @@ version = "0.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "828bdf600636e90c56652689f7c3823ae2072104e4b0b5e83ea984f592f12ab9"
 dependencies = [
- "ahash",
+ "ahash 0.2.18",
  "hash-db",
- "hashbrown",
+ "hashbrown 0.6.3",
  "parity-util-mem 0.3.0",
+]
+
+[[package]]
+name = "memory-db"
+version = "0.26.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "814bbecfc0451fc314eeea34f05bbcd5b98a7ad7af37faee088b86a1e633f1d4"
+dependencies = [
+ "hash-db",
+ "hashbrown 0.9.1",
+ "parity-util-mem 0.9.0",
 ]
 
 [[package]]
@@ -3025,7 +3218,7 @@ checksum = "c62469025f45dee2464ef9fc845f4683c543993792c1993e7d903c17a4546b74"
 dependencies = [
  "sha1",
  "sha2 0.7.1",
- "tiny-keccak",
+ "tiny-keccak 1.5.0",
 ]
 
 [[package]]
@@ -3049,7 +3242,7 @@ version = "0.2.33"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "42550d9fb7b6684a6d404d9fa7250c2eb2646df731d1c06afc06dcee9e1bcf88"
 dependencies = [
- "cfg-if",
+ "cfg-if 0.1.10",
  "libc",
  "winapi 0.3.8",
 ]
@@ -3067,7 +3260,7 @@ dependencies = [
  "ethcore-io",
  "ethcore-network",
  "ethcore-network-devp2p",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "kvdb-memorydb",
  "log",
  "lru-cache",
@@ -3099,7 +3292,7 @@ dependencies = [
  "block-reward",
  "common-types",
  "engine",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
  "machine",
 ]
@@ -3255,18 +3448,18 @@ dependencies = [
  "aes-ctr",
  "block-modes",
  "digest 0.8.0",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "hmac",
  "lazy_static",
  "parity-secp256k1",
  "pbkdf2",
  "rand 0.7.2",
  "ripemd160",
- "rustc-hex 2.0.1",
+ "rustc-hex 2.1.0",
  "scrypt",
  "sha2 0.8.0",
  "subtle 2.1.0",
- "tiny-keccak",
+ "tiny-keccak 1.5.0",
  "zeroize",
 ]
 
@@ -3313,7 +3506,7 @@ dependencies = [
  "ethcore-secretstore",
  "ethcore-service",
  "ethcore-sync",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethkey",
  "ethstore",
  "fake-fetch",
@@ -3322,7 +3515,7 @@ dependencies = [
  "ipnetwork",
  "journaldb",
  "jsonrpc-core",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "kvdb",
  "kvdb-rocksdb",
  "log",
@@ -3347,7 +3540,7 @@ dependencies = [
  "pretty_assertions",
  "regex",
  "registrar",
- "rlp",
+ "rlp 0.4.4",
  "rpassword",
  "rustc-hex 1.0.0",
  "rustc_version",
@@ -3374,11 +3567,11 @@ dependencies = [
  "ethabi-contract",
  "ethabi-derive",
  "ethcore-call-contract",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "fake-fetch",
  "fetch",
  "futures",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "log",
  "mime",
  "mime_guess",
@@ -3398,12 +3591,12 @@ dependencies = [
  "client-traits",
  "common-types",
  "ethcore",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "jsonrpc-core",
  "jsonrpc-http-server",
  "multihash",
  "parity-bytes",
- "rlp",
+ "rlp 0.4.4",
  "unicase 2.2.0",
 ]
 
@@ -3418,7 +3611,7 @@ dependencies = [
  "kvdb-memorydb",
  "log",
  "parity-crypto",
- "rlp",
+ "rlp 0.4.4",
  "serde",
  "serde_derive",
  "serde_json",
@@ -3451,7 +3644,7 @@ dependencies = [
  "ethcore-network",
  "ethcore-private-tx",
  "ethcore-sync",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
  "ethkey",
  "ethstore",
@@ -3466,7 +3659,7 @@ dependencies = [
  "jsonrpc-ipc-server",
  "jsonrpc-pubsub",
  "jsonrpc-ws-server",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "log",
  "machine",
  "macros",
@@ -3481,7 +3674,7 @@ dependencies = [
  "pretty_assertions",
  "rand 0.7.2",
  "rand_xorshift 0.2.0",
- "rlp",
+ "rlp 0.4.4",
  "rustc-hex 1.0.0",
  "semver",
  "serde",
@@ -3491,7 +3684,7 @@ dependencies = [
  "spec",
  "stats",
  "tempdir",
- "tiny-keccak",
+ "tiny-keccak 1.5.0",
  "tokio-timer 0.1.2",
  "trace",
  "transaction-pool",
@@ -3504,11 +3697,11 @@ dependencies = [
 name = "parity-rpc-client"
 version = "1.4.0"
 dependencies = [
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "futures",
  "jsonrpc-core",
  "jsonrpc-ws-server",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "log",
  "matches",
  "parity-rpc",
@@ -3533,8 +3726,20 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f9f9d99dae413590a5f37e43cd99b94d4e62a244160562899126913ea7108673"
 dependencies = [
  "arrayvec 0.5.1",
- "bitvec",
- "byte-slice-cast",
+ "bitvec 0.15.2",
+ "byte-slice-cast 0.3.4",
+ "serde",
+]
+
+[[package]]
+name = "parity-scale-codec"
+version = "2.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "75c823fdae1bb5ff5708ee61a62697e6296175dc671710876871c853f48592b3"
+dependencies = [
+ "arrayvec 0.5.1",
+ "bitvec 0.20.1",
+ "byte-slice-cast 1.0.0",
  "serde",
 ]
 
@@ -3546,7 +3751,7 @@ checksum = "4fca4f82fccae37e8bbdaeb949a4a218a1bbc485d11598f193d2a908042e5fc1"
 dependencies = [
  "arrayvec 0.5.1",
  "cc",
- "cfg-if",
+ "cfg-if 0.1.10",
  "rand 0.7.2",
 ]
 
@@ -3576,7 +3781,7 @@ version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1e57fea504fea33f9fbb5f49f378359030e7e026a6ab849bb9e8f0787376f1bf"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
  "futures",
  "libc",
  "log",
@@ -3600,8 +3805,8 @@ dependencies = [
  "ethabi-derive",
  "ethcore",
  "ethcore-sync",
- "ethereum-types",
- "keccak-hash",
+ "ethereum-types 0.8.0",
+ "keccak-hash 0.4.0",
  "lazy_static",
  "log",
  "matches",
@@ -3622,8 +3827,8 @@ version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8174d85e62c4d615fddd1ef67966bdc5757528891d0742f15b131ad04667b3f9"
 dependencies = [
- "cfg-if",
- "ethereum-types",
+ "cfg-if 0.1.10",
+ "ethereum-types 0.8.0",
  "jemallocator",
  "malloc_size_of_derive",
  "parking_lot 0.9.0",
@@ -3637,11 +3842,25 @@ version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "01b04e4d2588668d5aa93144b3bd719be963542e60042d66c7586ca763838a5b"
 dependencies = [
- "cfg-if",
- "impl-trait-for-tuples",
+ "cfg-if 0.1.10",
+ "impl-trait-for-tuples 0.1.3",
  "parity-util-mem-derive",
  "parking_lot 0.9.0",
  "smallvec 1.0.0",
+ "winapi 0.3.8",
+]
+
+[[package]]
+name = "parity-util-mem"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "664a8c6b8e62d8f9f2f937e391982eb433ab285b4cd9545b342441e04a906e42"
+dependencies = [
+ "cfg-if 1.0.0",
+ "hashbrown 0.9.1",
+ "impl-trait-for-tuples 0.2.0",
+ "parity-util-mem-derive",
+ "parking_lot 0.11.1",
  "winapi 0.3.8",
 ]
 
@@ -3661,7 +3880,7 @@ name = "parity-version"
 version = "2.7.2"
 dependencies = [
  "parity-bytes",
- "rlp",
+ "rlp 0.4.4",
  "rustc_version",
  "target_info",
  "toml 0.4.10",
@@ -3709,6 +3928,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "parking_lot"
+version = "0.11.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6d7744ac029df22dca6284efe4e898991d28e3085c706c972bcd7da4a27a15eb"
+dependencies = [
+ "instant",
+ "lock_api 0.4.2",
+ "parking_lot_core 0.8.2",
+]
+
+[[package]]
 name = "parking_lot_core"
 version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3728,7 +3958,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b876b1b9e7ac6e1a74a6da34d25c42e17e8862aa409cbbbdcfc8d86c6f3bc62b"
 dependencies = [
  "backtrace",
- "cfg-if",
+ "cfg-if 0.1.10",
  "cloudabi",
  "libc",
  "petgraph",
@@ -3740,20 +3970,34 @@ dependencies = [
 ]
 
 [[package]]
+name = "parking_lot_core"
+version = "0.8.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9ccb628cad4f84851442432c60ad8e1f607e29752d0bf072cbd0baf28aa34272"
+dependencies = [
+ "cfg-if 1.0.0",
+ "instant",
+ "libc",
+ "redox_syscall",
+ "smallvec 1.0.0",
+ "winapi 0.3.8",
+]
+
+[[package]]
 name = "patricia-trie-ethereum"
 version = "0.1.0"
 dependencies = [
  "criterion",
- "elastic-array",
- "ethereum-types",
+ "elastic-array 0.11.0",
+ "ethereum-types 0.11.0",
  "hash-db",
  "journaldb",
- "keccak-hash",
+ "keccak-hash 0.7.0",
  "keccak-hasher 0.1.1",
- "memory-db",
+ "memory-db 0.26.0",
  "parity-bytes",
- "rlp",
- "trie-db",
+ "rlp 0.5.0",
+ "trie-db 0.22.3",
 ]
 
 [[package]]
@@ -3852,29 +4096,29 @@ name = "pod"
 version = "0.1.0"
 dependencies = [
  "common-types",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
  "hash-db",
  "itertools 0.8.0",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "keccak-hasher 0.1.1",
  "kvdb",
  "log",
  "macros",
  "parity-bytes",
  "patricia-trie-ethereum",
- "rlp",
+ "rlp 0.4.4",
  "rustc-hex 1.0.0",
  "serde",
- "trie-db",
+ "trie-db 0.18.0",
  "triehash-ethereum",
 ]
 
 [[package]]
 name = "ppv-lite86"
-version = "0.2.5"
+version = "0.2.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e3cbf9f658cdb5000fcf6f362b8ea2ba154b9f146a61c7a20d647034c6b6561b"
+checksum = "ac74c624d6b2d21f425f752262f42188365d7b8ff1aff74c82e45136510a4857"
 
 [[package]]
 name = "pretty_assertions"
@@ -3950,11 +4194,24 @@ version = "0.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a0253db64c26d8b4e7896dd2063b516d2a1b9e0a5da26b5b78335f236d1e9522"
 dependencies = [
- "fixed-hash",
- "impl-codec",
- "impl-rlp",
- "impl-serde",
- "uint",
+ "fixed-hash 0.5.2",
+ "impl-codec 0.4.2",
+ "impl-rlp 0.2.1",
+ "impl-serde 0.2.3",
+ "uint 0.8.2",
+]
+
+[[package]]
+name = "primitive-types"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2415937401cb030a2a0a4d922483f945fa068f52a7dbb22ce0fe5f2b6f6adace"
+dependencies = [
+ "fixed-hash 0.7.0",
+ "impl-codec 0.5.0",
+ "impl-rlp 0.3.0",
+ "impl-serde 0.3.1",
+ "uint 0.9.0",
 ]
 
 [[package]]
@@ -4001,7 +4258,7 @@ version = "0.1.0"
 dependencies = [
  "clap",
  "env_logger 0.5.13",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
  "rustc-hex 1.0.0",
  "serde",
@@ -4045,6 +4302,12 @@ checksum = "053a8c8bcc71fcce321828dc897a98ab9760bef03a4fc36693c231e5b3216cfe"
 dependencies = [
  "proc-macro2 1.0.8",
 ]
+
+[[package]]
+name = "radium"
+version = "0.6.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "643f8f41a8ebc4c5dc4515c82bb8abd397b527fc20fd681b7c011c2aee5d44fb"
 
 [[package]]
 name = "rand"
@@ -4097,11 +4360,22 @@ version = "0.7.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3ae1b169243eaf61759b8475a998f0a385e42042370f3a7dbaf35246eacc8412"
 dependencies = [
- "getrandom",
+ "getrandom 0.1.11",
  "libc",
  "rand_chacha 0.2.1",
  "rand_core 0.5.1",
  "rand_hc 0.2.0",
+]
+
+[[package]]
+name = "rand"
+version = "0.8.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0ef9e7e66b4468674bfcb0c81af8b7fa0bb154fa9f28eb840da5c447baeb8d7e"
+dependencies = [
+ "libc",
+ "rand_chacha 0.3.0",
+ "rand_core 0.6.1",
 ]
 
 [[package]]
@@ -4122,6 +4396,16 @@ checksum = "03a2a90da8c7523f554344f921aa97283eadf6ac484a6d2a7d0212fa7f8d6853"
 dependencies = [
  "c2-chacha",
  "rand_core 0.5.1",
+]
+
+[[package]]
+name = "rand_chacha"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e12735cf05c9e10bf21534da50a147b924d555dc7a547c42e6bb2d5b6017ae0d"
+dependencies = [
+ "ppv-lite86",
+ "rand_core 0.6.1",
 ]
 
 [[package]]
@@ -4154,7 +4438,16 @@ version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "90bde5296fc891b0cef12a6d03ddccc162ce7b2aff54160af9338f8d40df6d19"
 dependencies = [
- "getrandom",
+ "getrandom 0.1.11",
+]
+
+[[package]]
+name = "rand_core"
+version = "0.6.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c026d7df8b298d90ccbbc5190bd04d85e159eaf5576caeacf8741da93ccbd2e5"
+dependencies = [
+ "getrandom 0.2.2",
 ]
 
 [[package]]
@@ -4190,7 +4483,7 @@ version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a788ae3edb696cfcba1c19bfd388cc4b8c21f8a408432b199c072825084da58a"
 dependencies = [
- "getrandom",
+ "getrandom 0.1.11",
  "rand_core 0.5.1",
 ]
 
@@ -4266,9 +4559,9 @@ dependencies = [
 
 [[package]]
 name = "redox_syscall"
-version = "0.1.40"
+version = "0.1.57"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c214e91d3ecf43e9a4e41e578973adeb14b474f2bee858742d127af75a0112b1"
+checksum = "41cc0f7e4d5d4544e8861606a285bb08d3e70712ccc7d2b84d7c0ccfaf4b05ce"
 
 [[package]]
 name = "redox_termios"
@@ -4315,7 +4608,7 @@ dependencies = [
  "ethabi-contract",
  "ethabi-derive",
  "ethcore-call-contract",
- "keccak-hash",
+ "keccak-hash 0.4.0",
 ]
 
 [[package]]
@@ -4359,16 +4652,26 @@ version = "0.4.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3a44d5ae8afcb238af8b75640907edc6c931efcfab2c854e81ed35fa080f84cd"
 dependencies = [
- "rustc-hex 2.0.1",
+ "rustc-hex 2.1.0",
+]
+
+[[package]]
+name = "rlp"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e54369147e3e7796c9b885c7304db87ca3d09a0a98f72843d532868675bbfba8"
+dependencies = [
+ "bytes 1.0.1",
+ "rustc-hex 2.1.0",
 ]
 
 [[package]]
 name = "rlp_compress"
 version = "0.1.0"
 dependencies = [
- "elastic-array",
+ "elastic-array 0.10.2",
  "lazy_static",
- "rlp",
+ "rlp 0.4.4",
 ]
 
 [[package]]
@@ -4377,7 +4680,7 @@ version = "0.1.0"
 dependencies = [
  "proc-macro2 1.0.8",
  "quote 1.0.2",
- "rlp",
+ "rlp 0.4.4",
  "syn 1.0.14",
 ]
 
@@ -4423,9 +4726,9 @@ checksum = "0ceb8ce7a5e520de349e1fa172baeba4a9e8d5ef06c47471863530bc4972ee1e"
 
 [[package]]
 name = "rustc-hex"
-version = "2.0.1"
+version = "2.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "403bb3a286107a04825a5f82e1270acc1e14028d3d554d7a1e08914549575ab8"
+checksum = "3e75f6a532d0fd9f7f13144f392b6ad56a32696bfcd9c78f797f16bbb6f072d6"
 
 [[package]]
 name = "rustc-serialize"
@@ -4506,9 +4809,9 @@ checksum = "94258f53601af11e6a49f722422f6e3425c52b06245a5cf9bc09908b174f5e27"
 
 [[package]]
 name = "scopeguard"
-version = "1.0.0"
+version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b42e15e59b18a828bbf5c58ea01debb36b9b096346de35d941dcb89009f24a0d"
+checksum = "d29ab0c6d3fc0ee92fe66e2d99f700eab17a8d57d1c1d3b748380fb20baa78cd"
 
 [[package]]
 name = "scrypt"
@@ -4722,12 +5025,12 @@ dependencies = [
  "ethcore-bloom-journal",
  "ethcore-db",
  "ethcore-io",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethkey",
  "hash-db",
  "itertools 0.5.10",
  "journaldb",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "keccak-hasher 0.1.1",
  "kvdb",
  "kvdb-rocksdb",
@@ -4740,14 +5043,14 @@ dependencies = [
  "patricia-trie-ethereum",
  "rand 0.7.2",
  "rand_xorshift 0.2.0",
- "rlp",
+ "rlp 0.4.4",
  "rlp_derive",
- "scopeguard 1.0.0",
+ "scopeguard 1.1.0",
  "snapshot-tests",
  "spec",
  "state-db",
  "tempdir",
- "trie-db",
+ "trie-db 0.18.0",
  "trie-standardmap",
  "triehash-ethereum",
 ]
@@ -4770,10 +5073,10 @@ dependencies = [
  "ethcore-blockchain",
  "ethcore-db",
  "ethcore-io",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "hash-db",
  "journaldb",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "keccak-hasher 0.1.1",
  "kvdb",
  "kvdb-rocksdb",
@@ -4786,11 +5089,11 @@ dependencies = [
  "patricia-trie-ethereum",
  "rand 0.7.2",
  "rand_xorshift 0.2.0",
- "rlp",
+ "rlp 0.4.4",
  "snapshot",
  "spec",
  "tempdir",
- "trie-db",
+ "trie-db 0.18.0",
  "trie-standardmap",
  "triehash-ethereum",
 ]
@@ -4801,7 +5104,7 @@ version = "0.3.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c4d11a52082057d87cb5caa31ad812f4504b97ab44732cd8359df2e9ff9f48e7"
 dependencies = [
- "cfg-if",
+ "cfg-if 0.1.10",
  "libc",
  "redox_syscall",
  "winapi 0.3.8",
@@ -4828,21 +5131,21 @@ dependencies = [
  "ethash-engine",
  "ethcore",
  "ethcore-builtin",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
  "evm",
  "executive-state",
  "hash-db",
  "instant-seal",
  "journaldb",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "kvdb-memorydb",
  "log",
  "machine",
  "null-engine",
  "parity-bytes",
  "pod",
- "rlp",
+ "rlp 0.4.4",
  "tempdir",
  "trace",
  "trie-vm-factories",
@@ -4871,10 +5174,10 @@ dependencies = [
  "ethcore",
  "ethcore-bloom-journal",
  "ethcore-db",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "hash-db",
  "journaldb",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "keccak-hasher 0.1.1",
  "kvdb",
  "log",
@@ -4917,7 +5220,7 @@ version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d24114bfcceb867ca7f71a0d3fe45d45619ec47a6fbfa98cb14e14250bfa5d6d"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
 ]
 
 [[package]]
@@ -4989,6 +5292,12 @@ dependencies = [
  "syn 1.0.14",
  "unicode-xid 0.2.0",
 ]
+
+[[package]]
+name = "tap"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "36474e732d1affd3a6ed582781b3683df3d0563714c59c39591e8ff707cf078e"
 
 [[package]]
 name = "target_info"
@@ -5118,6 +5427,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "tiny-keccak"
+version = "2.0.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2c9d3793400a45f954c52e73d068316d76b6f4e36977e3fcebb13a2721e80237"
+dependencies = [
+ "crunchy 0.2.2",
+]
+
+[[package]]
 name = "tinytemplate"
 version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5133,7 +5451,7 @@ version = "0.1.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5a09c0b5bb588872ab2f09afa13ee6e9dac11e10a0ec9e8e3ba39a5a5d530af6"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
  "futures",
  "mio",
  "num_cpus",
@@ -5157,7 +5475,7 @@ version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5c501eceaf96f0e1793cf26beb63da3d11c738c4a943fdf3746d81d64684c39f"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
  "futures",
  "tokio-io",
 ]
@@ -5199,7 +5517,7 @@ version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8b8a85fffbec3c5ab1ab62324570230dcd37ee5996a7859da5caf7b9d45e3e8c"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
  "futures",
  "log",
 ]
@@ -5210,7 +5528,7 @@ version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9d282d483052288b2308ba5ee795f5673b159c9bdf63c385a05609da782a5eae"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
  "futures",
  "mio",
  "mio-named-pipes",
@@ -5241,7 +5559,7 @@ version = "0.10.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2d7cf08f990090abd6c6a73cab46fed62f85e8aef8b99e4b918a9f4a637f0676"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
  "futures",
  "iovec",
  "rustls",
@@ -5274,7 +5592,7 @@ version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7ad235e9dadd126b2d47f6736f65aa1fdcd6420e66ca63f44177bc78df89f912"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
  "futures",
  "iovec",
  "mio",
@@ -5327,7 +5645,7 @@ version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "da941144b816d0dcda4db3a1ba87596e4df5e860a72b70783fe435891f80601c"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
  "futures",
  "log",
  "mio",
@@ -5342,7 +5660,7 @@ version = "0.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "037ffc3ba0e12a0ab4aca92e5234e0dedeb48fddf6ccd260f1f150a36a9f2445"
 dependencies = [
- "bytes",
+ "bytes 0.4.12",
  "futures",
  "iovec",
  "libc",
@@ -5388,14 +5706,14 @@ dependencies = [
  "ethcore",
  "ethcore-blockchain",
  "ethcore-db",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "evm",
  "kvdb",
  "log",
  "parity-bytes",
  "parity-util-mem 0.3.0",
  "parking_lot 0.9.0",
- "rlp",
+ "rlp 0.4.4",
  "rlp_derive",
  "vm",
 ]
@@ -5433,9 +5751,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5756812179defbff624e0ca766bedf6298cc7164037cc945584dc37833a4b3f9"
 dependencies = [
  "hash-db",
- "hashbrown",
+ "hashbrown 0.6.3",
  "log",
  "rand 0.6.1",
+ "smallvec 1.0.0",
+]
+
+[[package]]
+name = "trie-db"
+version = "0.22.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ec051edf7f0fc9499a2cb0947652cab2148b9d7f61cee7605e312e9f970dacaf"
+dependencies = [
+ "hash-db",
+ "hashbrown 0.9.1",
+ "log",
+ "rustc-hex 2.1.0",
  "smallvec 1.0.0",
 ]
 
@@ -5457,7 +5788,7 @@ dependencies = [
  "evm",
  "keccak-hasher 0.1.1",
  "patricia-trie-ethereum",
- "trie-db",
+ "trie-db 0.18.0",
  "vm",
  "wasm",
 ]
@@ -5469,14 +5800,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a518c10ed2591fd67bbafd7d5daf725767d07b129d8c99b3b3831eeabd639ed9"
 dependencies = [
  "hash-db",
- "rlp",
+ "rlp 0.4.4",
 ]
 
 [[package]]
 name = "triehash-ethereum"
 version = "0.2.0"
 dependencies = [
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "keccak-hasher 0.1.1",
  "triehash",
 ]
@@ -5501,7 +5832,19 @@ checksum = "e75a4cdd7b87b28840dba13c483b9a88ee6bbf16ba5c951ee1ecfcf723078e0d"
 dependencies = [
  "byteorder",
  "crunchy 0.2.2",
- "rustc-hex 2.0.1",
+ "rustc-hex 2.1.0",
+ "static_assertions 1.1.0",
+]
+
+[[package]]
+name = "uint"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e11fe9a9348741cf134085ad57c249508345fe16411b3d7fb4ff2da2f1d6382e"
+dependencies = [
+ "byteorder",
+ "crunchy 0.2.2",
+ "hex",
  "static_assertions 1.1.0",
 ]
 
@@ -5633,10 +5976,10 @@ dependencies = [
  "ethcore",
  "ethcore-accounts",
  "ethcore-call-contract",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "ethjson",
  "executive-state",
- "keccak-hash",
+ "keccak-hash 0.4.0",
  "kvdb",
  "lazy_static",
  "log",
@@ -5646,7 +5989,7 @@ dependencies = [
  "parity-crypto",
  "parity-util-mem 0.3.0",
  "parking_lot 0.9.0",
- "rlp",
+ "rlp 0.4.4",
  "rustc-hex 1.0.0",
  "spec",
  "triehash-ethereum",
@@ -5699,8 +6042,8 @@ dependencies = [
  "ethcore-blockchain",
  "ethcore-call-contract",
  "ethcore-io",
- "ethereum-types",
- "keccak-hash",
+ "ethereum-types 0.8.0",
+ "keccak-hash 0.4.0",
  "len-caching-lock",
  "log",
  "machine",
@@ -5710,7 +6053,7 @@ dependencies = [
  "parity-crypto",
  "parity-util-mem 0.3.0",
  "parking_lot 0.9.0",
- "rlp",
+ "rlp 0.4.4",
  "spec",
  "tempdir",
  "time-utils",
@@ -5728,12 +6071,12 @@ checksum = "914b1a6776c4c929a602fafd8bc742e06365d4bcbe48c30f9cca5824f70dc9dd"
 name = "vm"
 version = "0.1.0"
 dependencies = [
- "ethereum-types",
+ "ethereum-types 0.11.0",
  "ethjson",
- "keccak-hash",
+ "keccak-hash 0.7.0",
  "parity-bytes",
  "patricia-trie-ethereum",
- "rlp",
+ "rlp 0.5.0",
 ]
 
 [[package]]
@@ -5765,12 +6108,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fd5442abcac6525a045cc8c795aedb60da7a2e5e89c7bf18a0d5357849bb23c7"
 
 [[package]]
+name = "wasi"
+version = "0.10.2+wasi-snapshot-preview1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fd6fbd9a79829dd1ad0cc20627bf1ed606756a7f77edff7b66b7064f9cb327c6"
+
+[[package]]
 name = "wasm"
 version = "0.1.0"
 dependencies = [
  "byteorder",
  "env_logger 0.5.13",
- "ethereum-types",
+ "ethereum-types 0.8.0",
  "libc",
  "log",
  "parity-wasm",
@@ -5785,7 +6134,7 @@ version = "0.2.58"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5205e9afdf42282b192e2310a5b463a6d1c1d774e30dc3c791ac37ab42d2616c"
 dependencies = [
- "cfg-if",
+ "cfg-if 0.1.10",
  "wasm-bindgen-macro",
 ]
 
@@ -5963,7 +6312,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8a6f5bb86663ff4d1639408410f50bf6050367a8525d644d49a6894cd618a631"
 dependencies = [
  "byteorder",
- "bytes",
+ "bytes 0.4.12",
  "httparse",
  "log",
  "mio",
@@ -5983,6 +6332,12 @@ dependencies = [
  "winapi 0.2.8",
  "winapi-build",
 ]
+
+[[package]]
+name = "wyz"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "85e60b0d1b5f99db2556934e21937020776a5d31520bf169e851ac44e6420214"
 
 [[package]]
 name = "xdg"

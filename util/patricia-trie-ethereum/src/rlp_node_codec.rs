@@ -46,7 +46,7 @@ fn encode_partial_from_iterator_iter<'a>(
 	odd: bool,
 	is_leaf: bool,
 ) -> impl Iterator<Item = u8> + 'a {
-	let first = if odd { partial.next().unwrap_or(0) } else { 0 }; 
+	let first = if odd { partial.next().unwrap_or(0) } else { 0 };
 	encode_partial_inner_iter(first, partial, odd, is_leaf)
 }
 
@@ -173,7 +173,7 @@ impl NodeCodec for RlpNodeCodec<KeccakHasher> {
 		let mut stream = RlpStream::new_list(2);
 		stream.append_iter(encode_partial_iter(partial, true));
 		stream.append(&value);
-		stream.drain()
+		stream.out().to_vec()
 	}
 
 	fn extension_node(
@@ -190,7 +190,7 @@ impl NodeCodec for RlpNodeCodec<KeccakHasher> {
 				stream.append_raw(bytes, 1)
 			},
 		};
-		stream.drain()
+		stream.out().to_vec()
 	}
 
 	fn branch_node(
@@ -217,7 +217,7 @@ impl NodeCodec for RlpNodeCodec<KeccakHasher> {
 		} else {
 			stream.append_empty_data();
 		}
-		stream.drain()
+		stream.out().to_vec()
 	}
 
 	fn branch_node_nibbled(
