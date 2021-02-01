@@ -344,18 +344,18 @@ dependencies = [
 
 [[package]]
 name = "bit-set"
-version = "0.4.0"
+version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d9bf6104718e80d7b26a68fdbacff3481cfc05df670821affc7e9cbc1884400c"
+checksum = "6e11e16035ea35e4e5997b393eacbf6f63983188f7a2ad25bfb13465f5ad59de"
 dependencies = [
  "bit-vec",
 ]
 
 [[package]]
 name = "bit-vec"
-version = "0.4.4"
+version = "0.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "02b4ff8b16e6076c3e14220b39fbc1fabb6737522281a388998046859400895f"
+checksum = "349f9b6a179ed607305526ca489b34ad0a41aed5f7980fa90eb03160b69598fb"
 
 [[package]]
 name = "bitflags"
@@ -1379,7 +1379,7 @@ dependencies = [
  "eip-152",
  "ethereum-types 0.8.0",
  "ethjson",
- "hex-literal",
+ "hex-literal 0.2.1",
  "keccak-hash 0.4.0",
  "log",
  "macros",
@@ -1860,16 +1860,16 @@ version = "0.1.0"
 dependencies = [
  "bit-set",
  "criterion",
- "ethereum-types 0.8.0",
- "hex-literal",
- "keccak-hash 0.4.0",
+ "ethereum-types 0.11.0",
+ "hex-literal 0.3.1",
+ "keccak-hash 0.7.0",
  "lazy_static",
  "log",
  "memory-cache",
  "parity-bytes",
- "parity-util-mem 0.3.0",
- "parking_lot 0.9.0",
- "rustc-hex 1.0.0",
+ "parity-util-mem 0.9.0",
+ "parking_lot 0.11.1",
+ "rustc-hex 2.1.0",
  "vm",
 ]
 
@@ -2264,6 +2264,12 @@ dependencies = [
  "hex-literal-impl",
  "proc-macro-hack",
 ]
+
+[[package]]
+name = "hex-literal"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5af1f635ef1bc545d78392b136bfe1c9809e029023c84a3638a864a10b8819c8"
 
 [[package]]
 name = "hex-literal-impl"
@@ -2955,6 +2961,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "lru"
+version = "0.6.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3aae342b73d57ad0b8b364bd12584819f2c1fe9114285dfcf8b0722607671635"
+dependencies = [
+ "hashbrown 0.9.1",
+]
+
+[[package]]
 name = "lru-cache"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3062,7 +3077,7 @@ name = "memory-cache"
 version = "0.1.0"
 dependencies = [
  "lru-cache",
- "parity-util-mem 0.3.0",
+ "parity-util-mem 0.9.0",
 ]
 
 [[package]]
@@ -3857,10 +3872,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "664a8c6b8e62d8f9f2f937e391982eb433ab285b4cd9545b342441e04a906e42"
 dependencies = [
  "cfg-if 1.0.0",
+ "ethereum-types 0.11.0",
  "hashbrown 0.9.1",
  "impl-trait-for-tuples 0.2.0",
+ "lru",
  "parity-util-mem-derive",
  "parking_lot 0.11.1",
+ "primitive-types 0.9.0",
+ "smallvec 1.0.0",
  "winapi 0.3.8",
 ]
 
